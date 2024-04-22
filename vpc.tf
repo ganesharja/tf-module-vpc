@@ -1,6 +1,6 @@
 resource "aws_vpc" "main" {
   cidr_block                = var.VPC_CIDR
   tags = {
-    Name = "main-vpc"
+    Name = "roboshop-${var.ENV}-vpc"
   }
 }
