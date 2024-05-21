@@ -9,8 +9,7 @@ resource "aws_internet_gateway" "igw" {
 
 # Creates Elastic IP Address which would used by the NAT GW. Ensure, EIP is provisioned first and then NAT
 resource "aws_eip" "ngw_ip" {
-  vpc      = true
-
+  
   tags = {
     Name = "roboshop-${var.ENV}-ngw-eip"
   }
